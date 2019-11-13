@@ -16,7 +16,7 @@ app.set('views', __dirname + "/client/views");
 app.use(express.urlencoded({extended: true}));
 
 require('./server/config/mongoose.js')
-// require('./server/models/task.js')
+require('./server/models/task.js')
 require('./server/config/routes.js')(app)
 
 app.use(express.static( __dirname + '/public/dist/public' ));
